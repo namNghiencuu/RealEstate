@@ -1,0 +1,83 @@
+#layout {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* searchBox */
+/* ************************************************** */
+/* ************************************************** */
+#searchBox {
+  position: fixed;
+  height: 40px;
+  display: flex;
+}
+
+input[id="searchInput"] {
+  height: inherit;
+  width: 0px;
+  padding: 0px;
+  border: none;
+  font-size: 16px;
+  background-color: #06d79cce;
+  color: white;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+#searchBox:hover {
+  cursor: pointer;
+  background-color: #06d79c;
+  border-radius: 20px 15px 15px 20px;
+}
+
+#searchBox:hover > #searchInput,
+#searchInput:focus {
+  width: 200px;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* item */
+/* ************************************************** */
+/* ************************************************** */
+#layout > .item {
+  display: grid;
+  border: 1px solid rgb(70, 69, 69);
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 80% 10% auto;
+  justify-items: stretch;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+#layout > .item:hover {
+  cursor: pointer;
+}
+
+.FCLogo {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+}
+.FCLogo > img {
+  object-fit: cover;
+  width: 80%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.item > .FCName {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+}

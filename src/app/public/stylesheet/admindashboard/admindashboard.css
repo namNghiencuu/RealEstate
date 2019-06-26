@@ -1,0 +1,148 @@
+/* ************************************************** */
+/* ************************************************** */
+/* General result */
+/* ************************************************** */
+/* ************************************************** */
+#result {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  height: 20vh;
+}
+
+.result-item {
+  flex-basis: 20%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto;
+  grid-row-gap: 0px;
+  align-content: center;
+  border: 1px solid black;
+}
+
+.result-item i {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-size: 50pt;
+  place-self: center;
+}
+
+.result-item h1 {
+  place-self: center;
+  margin-top: 0;
+}
+
+.result-item h3 {
+  place-self: center;
+  margin-bottom: 0;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* social media and website visit section */
+/* ************************************************** */
+/* ************************************************** */
+#social-media-and-website-visit {
+  display: grid;
+  grid-template-columns: 20% 4% auto;
+  grid-template-rows: 20px auto auto auto 20px;
+  grid-row-gap: 20px;
+  height: fit-content;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* activity and to do */
+/* ************************************************** */
+/* ************************************************** */
+#activity-and-todo {
+  display: grid;
+  grid-template-columns: auto 5% auto;
+  grid-template-rows: auto 30px;
+  height: 400px;
+}
+#activity {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  background-color: white;
+}
+#todo {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  background-color: white;
+}
+#activity > *,
+#todo > * {
+  padding: 0 10px 0 10px;
+}
+#activity > div:first-child,
+#todo > div:first-child {
+  border-left: 5px solid red;
+}
+#activity .assignTask {
+  display: grid;
+  grid-template-columns: 10% auto;
+  grid-template-rows: 20% auto 50% 10px;
+}
+
+#activity .assignTask .avatar {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.name {
+  grid-row: 1;
+  font-weight: bold;
+}
+.dosomething {
+  grid-row: 2;
+  color: gray;
+}
+.detail {
+  grid-row: 3;
+  font-size: large;
+}
+
+#todo .todo-item {
+  display: grid;
+  grid-template-columns: 5% auto;
+  grid-template-rows: auto 40px auto 10px;
+}
+
+.todo-item .responsiblePeople {
+  grid-column: 2;
+  grid-row: 2;
+  display: inline-flex;
+}
+.todo-item .responsiblePeople > div {
+  margin-left: 5px;
+}
+.todo-item .detail {
+  grid-column: 2;
+  grid-row: 1;
+}
+.todo-item .time {
+  grid-column: 2;
+  grid-row: 3;
+  color: gray;
+  font-size: 14;
+}
+
+.todo-item input[type="checkbox"]:checked + label.detail {
+  text-decoration: line-through;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}

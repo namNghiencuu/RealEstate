@@ -1,0 +1,30 @@
+#layout {
+  display: grid;
+  grid-template-columns: 30% auto 10px;
+  grid-template-rows: auto;
+  grid-column-gap: 40px;
+  margin-bottom: 20px;
+}
+#layout #sidebar {
+  grid-area: 1/1/1/1;
+  background-color: rgb(78, 78, 78);
+  color: rgb(0, 194, 0);
+  overflow-y: scroll;
+}
+#layout #table {
+  grid-area: 2/2/2/2;
+  background-color: pink;
+}
+#sidebar li {
+  display: block;
+  padding: 2px 2px 2px 2px;
+  cursor: pointer;
+  font-size: 14pt;
+}
+#sidebar li:before {
+  content: "-";
+  margin-right: 6px;
+}
+#sidebar li:hover {
+  color: rgb(0, 90, 0);
+}

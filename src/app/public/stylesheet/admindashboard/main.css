@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#pageName {
+  padding-left: 10%;
+  padding-top: 10px;
+  font-size: 24pt;
+  color: rgb(66, 66, 252);
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* background */
+/* ************************************************** */
+/* ************************************************** */
+.bg-green {
+  background-color: #06d79c;
+  color: white;
+}
+.bg-red {
+  background-color: #ee5350;
+  color: white;
+}
+
+.bg-blue {
+  background-color: #398bf7;
+  color: white;
+}
+
+.bg-purple {
+  background-color: #745af1;
+  color: white;
+}
+
+.bg-white {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.bg-trans {
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+}
+.bg-hover-gray:hover {
+  background-color: gray;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* button */
+/* ************************************************** */
+/* ************************************************** */
+.btn {
+  cursor: pointer;
+}
+
+.btn-md {
+  width: 10vw;
+  height: 5vh;
+}
+.btn-large {
+  width: 10vw;
+  height: 5vh;
+}
+.btn-trans {
+  background-color: rgba(255, 255, 255, 0);
+}
+.rounded-corner {
+  border-radius: 15px;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* flex */
+/* ************************************************** */
+/* ************************************************** */
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center-all {
+  justify-content: center;
+  align-content: center;
+}
+.flex-item-left {
+  margin-left: auto;
+}
+.flex-align-items-center {
+  align-items: center;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* shape */
+/* ************************************************** */
+/* ************************************************** */
+.shape-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  border-radius: 50%;
+}
+.circle-xs {
+  width: 20px;
+  height: 20px;
+}
+.circle-s {
+  width: 40px;
+  height: 40px;
+}
+.circle-md {
+  width: 60px;
+  height: 60px;
+}
+.circle-md {
+  width: 80px;
+  height: 80px;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* shape */
+/* ************************************************** */
+/* ************************************************** */
+.box {
+  border: 1px solid black;
+}
+
+/* Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 30vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

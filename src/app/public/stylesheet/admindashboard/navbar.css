@@ -1,0 +1,68 @@
+/* ************************************************** */
+/* ************************************************** */
+/* navbar */
+/* ************************************************** */
+/* ************************************************** */
+#navbar {
+  overflow: hidden;
+  background-color: black;
+  padding: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#navbar a {
+  padding: 14px 16px;
+  color: gray;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  color: white;
+}
+
+#navbar a.active {
+  color: white;
+  background-color: #4caf50;
+}
+#navbar a.active:hover {
+  background-color: #4caf50;
+}
+
+@media screen and (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #userInfoBar {
+    flex-direction: column;
+  }
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* UserInfoBar */
+/* ************************************************** */
+/* ************************************************** */
+#userInfoBar {
+  height: 10vh;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: right;
+  border: 2px black inset;
+  top: 0;
+  position: sticky;
+}
+
+#userInfoBar div {
+  margin: 5px;
+  display: inline-block;
+}
+
+.userInfoBar-item {
+  padding: 5px 5px;
+  border: 1px solid black;
+}
