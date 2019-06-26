@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate Platform</title>
+  <link rel="shortcut icon" href="app/public/images/PageLogo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/salehome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="body1">
+    <!--HEADER-->
+    <%- include navbar.ejs %>
+    <!--MAINPAGE-->
+    <div class="mainmenu">
+      <P class="titlerent">Thông tin nhà cho thuê</P>
+      <form action="/salehome" method="POST">
+        <div class="posting">
+          <input type="text" id="text" class="aa" name="title" placeholder="Tiêu đề" />
+          <br />
+          <input type="text" class="aa" id="text" name="address" placeholder="Địa chỉ" />
+          <br />
+          <input type="text" id="text" name="price" class="aa" placeholder="Giá trị " />
+          <br />
+          <input type="text" id="text" name="area" class="aa" placeholder="Diện tích" />
+          <br />
+          <div class="tienich">
+            <p class="tienichtitle">Tiện ích</p>
+            <div class="details">
+              <div class="row1">
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Wifi
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Cảnh quan đẹp
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Không gian rộng
+              </div>
+              <div class="row2">
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Sân bay
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Trường Học
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Chợ
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Khu thương mại
+              </div>
+              <div class="row3">
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Máy lạnh
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Máy Giặt
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Máy sấy tóc
+                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
+                Máy hút bụi
+              </div>
+            </div>
+          </div>
+          <div class="idcard">
+            <p class="cmnd">Legal Dcument:</p>
+            <input type="file" id="file" name="file" value="fileUpload" />
+          </div>
+        </div>
+        <div class="dieukhoan">
+          <input type="checkbox" name="checkbox" style="margin-right: 10px;" />
+          <label>Tôi cam kết đã đọc những
+            <span><a href="#">điều khoản</a></span> về đăng tin</label>
+        </div>
+        <button type="submit" class="save">Đăng tin</button>
+        <button type="button" class="save">Trở về</button>
+      </form>
+    </div>
+    <!--FOOTER-->
+    <%- include footer.ejs %>
+  </section>
+  <script>
+
+  </script>
+</body>
+
+</html>
