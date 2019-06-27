@@ -1,87 +1,443 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Real Estate Platform</title>
+    <link rel="shortcut icon" href="app/public/images/PageLogo/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/salehome.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Real Estate Platform</title>
-  <link rel="shortcut icon" href="app/public/images/PageLogo/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="/stylesheets/salehome.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <section class="body1">
-    <!--HEADER-->
-    <%- include navbar.ejs %>
-    <!--MAINPAGE-->
-    <div class="mainmenu">
-      <P class="titlerent">Thông tin nhà cho thuê</P>
-      <form action="/salehome" method="POST">
-        <div class="posting">
-          <input type="text" id="text" class="aa" name="title" placeholder="Tiêu đề" />
-          <br />
-          <input type="text" class="aa" id="text" name="address" placeholder="Địa chỉ" />
-          <br />
-          <input type="text" id="text" name="price" class="aa" placeholder="Giá trị " />
-          <br />
-          <input type="text" id="text" name="area" class="aa" placeholder="Diện tích" />
-          <br />
-          <div class="tienich">
-            <p class="tienichtitle">Tiện ích</p>
-            <div class="details">
-              <div class="row1">
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Wifi
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Cảnh quan đẹp
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Không gian rộng
-              </div>
-              <div class="row2">
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Sân bay
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Trường Học
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Chợ
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Khu thương mại
-              </div>
-              <div class="row3">
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Máy lạnh
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Máy Giặt
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Máy sấy tóc
-                <input type="checkbox" name="checkbox" style="margin-right: 5px;margin-left: 10px;" />
-                Máy hút bụi
+  <body>
+    <section class="body1">
+      <!--HEADER-->
+      <%- include navbar.ejs %>
+      <!--MAINPAGE-->
+      <div class="mainmenu">
+        <P class="titlerent">Thông tin sản phẩm </P>
+        <form action="#">
+          <div class="posting">
+            <label class="loaibds">Loại sản phẩm:</label>
+            <select class="custom-select3" name="loai">
+              <option value="0">Loại:</option>
+              <option value="2">Nhà bán</option>
+              <option value="3">Căn hộ bán</option>
+            </select>
+            <br />
+            <input
+              type="text"
+              id="text"
+              class="aa"
+              name="tieude"
+              placeholder="Tiêu đề"
+            />
+            <br />
+            <input
+              type="text"
+              id="text"
+              class="aa"
+              name="tenchusohuu"
+              placeholder="Tên chủ sở hữu"
+            />
+            <br />
+            <input
+              type="text"
+              class="aa"
+              id="text"
+              name="diachi"
+              placeholder="Địa chỉ"
+            />
+            <br />
+            <select class="custom-select" name="thanhpho">
+              <option value="0">Thành Phố:</option>
+              <option value="1">Quận 1</option>
+              <option value="2">Quận 1</option>
+              <option value="3">Quận 1</option>
+              <option value="4">Quận 1</option>
+              <option value="5">Quận 1</option>
+              <option value="6">Quận 1</option>
+              <option value="7">Quận 1</option>
+              <option value="8">Quận 1</option>
+              <option value="9">Mini</option>
+              <option value="10">Quận 1</option>
+              <option value="11">Quận 1</option>
+              <option value="12">Quận 1</option>
+            </select>
+            <select class="custom-select1" name="quan">
+              <option value="0">Quận:</option>
+              <option value="1">Quận 1</option>
+              <option value="2">Quận 1</option>
+              <option value="3">Quận 1</option>
+              <option value="4">Quận 1</option>
+              <option value="5">Quận 1</option>
+              <option value="6">Quận 1</option>
+              <option value="7">Quận 1</option>
+              <option value="8">Quận 1</option>
+              <option value="9">Mini</option>
+              <option value="10">Quận 1</option>
+              <option value="11">Quận 1</option>
+              <option value="12">Quận 1</option>
+            </select>
+            <select class="custom-select2" name="huyen">
+              <option value="0">Huyện/Phường:</option>
+              <option value="1">Quận 1</option>
+              <option value="2">Quận 1</option>
+              <option value="3">Quận 1</option>
+              <option value="4">Quận 1</option>
+              <option value="5">Quận 1</option>
+              <option value="6">Quận 1</option>
+              <option value="7">Quận 1</option>
+              <option value="8">Quận 1</option>
+              <option value="9">Mini</option>
+              <option value="10">Quận 1</option>
+              <option value="11">Quận 1</option>
+              <option value="12">Quận 1</option>
+            </select>
+            <br />
+            <input
+              type="text"
+              id="text"
+              name="giatri"
+              class="aa"
+              placeholder="Giá trị "
+            />
+            <br />
+            <input
+              type="text"
+              id="text"
+              name="dientich"
+              class="aa"
+              placeholder="Diện tích"
+            />
+            <br />
+            <label class="motachitiet">Mô tả chi tiết :</label>
+            <br />
+            <textarea rows="auto" cols="auto" class="textarea"></textarea>
+            <br />
+            <div class="tienich">
+              <p class="tienichtitle">Tiện ích</p>
+              <div class="details">
+                <div class="row1">
+                  <input type="checkbox" name="checkbox" class="wifi" />
+                  Wifi<br />
+                  <input type="checkbox" name="checkbox" class="canhquan" />
+                  Cảnh quan đẹp<br />
+                  <input type="checkbox" name="checkbox" class="khonggian" />
+                  Không gian rộng<br />
+                </div>
+                <div class="row2">
+                  <input type="checkbox" name="checkbox" style="" />
+                  Sân bay
+                  <br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Trường Học<br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Chợ<br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Khu thương mại
+                </div>
+                <div class="row3">
+                  <input type="checkbox" name="checkbox" style="" />
+                  Máy lạnh
+                  <br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Máy Giặt<br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Máy sấy tóc<br />
+                  <input type="checkbox" name="checkbox" style="" />
+                  Máy hút bụi
+                </div>
               </div>
             </div>
+            <div class="idcard1">
+              <p class="cmnd">Images:</p>
+              <input
+                type="file"
+                id="file"
+                name="file"
+                class=" aa file"
+                value="fileUpload"
+                multiple
+              />
+            </div>
+            <p class="uploadmaximum">Please upload maximum 10 images</p>
+            <div class="idcard1">
+              <p class="cmnd">Legal Dcument:</p>
+              <input
+                type="file"
+                id="file"
+                name="file"
+                class=" aa file"
+                value="fileUpload"
+              />
+            </div>
           </div>
-          <div class="idcard">
-            <p class="cmnd">Legal Dcument:</p>
-            <input type="file" id="file" name="file" value="fileUpload" />
+          <div class="dieukhoan">
+            <input
+              type="checkbox"
+              name="checkbox"
+              style="margin-right: 10px;"
+            />
+            <label
+              >Tôi cam kết đẽ đọc những
+              <a href="#"><span>điều khoản</span></a> về đăng tin</label
+            >
           </div>
-        </div>
-        <div class="dieukhoan">
-          <input type="checkbox" name="checkbox" style="margin-right: 10px;" />
-          <label>Tôi cam kết đã đọc những
-            <span><a href="#">điều khoản</a></span> về đăng tin</label>
-        </div>
-        <button type="submit" class="save">Đăng tin</button>
-        <button type="button" class="save">Trở về</button>
-      </form>
-    </div>
-    <!--FOOTER-->
-    <%- include footer.ejs %>
-  </section>
-  <script>
-
-  </script>
-</body>
-
+          <a href="./billingafterpost.html"
+            ><button type="button" class="save">Đăng tin</button></a
+          >
+          <a href="./typeproperty.html"
+            ><button type="button" class="save">Trở về</button></a
+          >
+        </form>
+      </div>
+      <!--FOOTER-->
+      <%- include footer.ejs %>
+    </section>
+    <script>
+      var x, i, j, selElmnt, a, b, c;
+      /*look for any elements with the class "custom-select":*/
+      x = document.getElementsByClassName("custom-select");
+      for (i = 0; i < x.length; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+          /*for each option in the original select element,
+          create a new DIV that will act as an option item:*/
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function(e) {
+            /*when an item is clicked, update the original select box,
+              and the selected item:*/
+            var y, i, k, s, h;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < s.length; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                for (k = 0; k < y.length; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+          });
+          b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+          /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+      }
+      function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x,
+          y,
+          i,
+          arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+          if (elmnt == y[i]) {
+            arrNo.push(i);
+          } else {
+            y[i].classList.remove("select-arrow-active");
+          }
+        }
+        for (i = 0; i < x.length; i++) {
+          if (arrNo.indexOf(i)) {
+            x[i].classList.add("select-hide");
+          }
+        }
+      }
+      /*if the user clicks anywhere outside the select box,
+      then close all select boxes:*/
+      document.addEventListener("click", closeAllSelect);
+    </script>
+    <script>
+      var x, i, j, selElmnt, a, b, c;
+      /*look for any elements with the class "custom-select":*/
+      x = document.getElementsByClassName("custom-select1");
+      for (i = 0; i < x.length; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+          /*for each option in the original select element,
+          create a new DIV that will act as an option item:*/
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function(e) {
+            /*when an item is clicked, update the original select box,
+              and the selected item:*/
+            var y, i, k, s, h;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < s.length; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                for (k = 0; k < y.length; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+          });
+          b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+          /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+      }
+      function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x,
+          y,
+          i,
+          arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+          if (elmnt == y[i]) {
+            arrNo.push(i);
+          } else {
+            y[i].classList.remove("select-arrow-active");
+          }
+        }
+        for (i = 0; i < x.length; i++) {
+          if (arrNo.indexOf(i)) {
+            x[i].classList.add("select-hide");
+          }
+        }
+      }
+      /*if the user clicks anywhere outside the select box,
+      then close all select boxes:*/
+      document.addEventListener("click", closeAllSelect);
+    </script>
+    <script>
+      var x, i, j, selElmnt, a, b, c;
+      /*look for any elements with the class "custom-select":*/
+      x = document.getElementsByClassName("custom-select2");
+      for (i = 0; i < x.length; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+          /*for each option in the original select element,
+          create a new DIV that will act as an option item:*/
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function(e) {
+            /*when an item is clicked, update the original select box,
+              and the selected item:*/
+            var y, i, k, s, h;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < s.length; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                for (k = 0; k < y.length; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+          });
+          b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+          /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+      }
+      function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x,
+          y,
+          i,
+          arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+          if (elmnt == y[i]) {
+            arrNo.push(i);
+          } else {
+            y[i].classList.remove("select-arrow-active");
+          }
+        }
+        for (i = 0; i < x.length; i++) {
+          if (arrNo.indexOf(i)) {
+            x[i].classList.add("select-hide");
+          }
+        }
+      }
+      /*if the user clicks anywhere outside the select box,
+      then close all select boxes:*/
+      document.addEventListener("click", closeAllSelect);
+    </script>
+  </body>
 </html>
