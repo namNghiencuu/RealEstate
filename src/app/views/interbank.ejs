@@ -1,170 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Real Estate Platform</title>
-    <link rel="shortcut icon" href="/public/images/PageLogo/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css"/>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/stylesheets/interbank.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="body1">
-      <!--HEADER-->
-      <div id="navbar">
-        <div class="logo">
-          <a href="./realestate"
-            ><img
-              src="/images/PageLogo/logo_main.png"
-              width="inherit;"
-          /></a>
-        </div>
-        <div><a href="">Buy</a></div>
-        <div><a href="">Rent</a></div>
-        <div><a href="">Sell</a></div>
-        <div><a href="">Agent Finder</a></div>
-        <div><a href="/signin" class="abc">Sign in</a></div>
-        <div><a href="" class="abc">Help</a></div>
-      </div>
-      <!--MAINPAGE-->
-      <div class="main">
-        <p class="titlethanhtoan">Thực hiện thanh toán</p>
-        <div class="innermain">
-          <div class="inputinfo">
-            <form>
-              <input
-                type="text"
-                class="cardNumber aa"
-                placeholder="Card Number"
-              />
-              <br />
-              <input
-                type="text"
-                class="cardOwner aa"
-                placeholder="Card Owner"
-              />
-              <br />
-              <input
-                type="datetime"
-                class="launchedday aa"
-                placeholder="Release Day"
-              />
-              <br />
-              <br />
-              <a href="../typeproperty">
-                <button type="button" class="thanhtoan">Pay</button>
-              </a>
-              <a href="../checkaccount">
-                <button type="button" class="thanhtoan">Back</button></a
-              >
-            </form>
-          </div>
-          <div class="banklogo">
-            <img
-              src="/images/WebcoPhung/banking/viettinbank.png"
-              class="viettinbank"
-            />
-          </div>
-        </div>
-      </div>
-      <!--FOOTER-->
-      <div id="footer" class="footers" role="contentinfo">
-        <div class="inner">
-          <div class="logofooter">
-            <a
-              href="/realestate"
-              class="footerlogo"
-              id="logofooters"
-            >
-              <img
-                src="/images/PageLogo/logo_main.png"
-                class="footerimage"
-              />
+
+<head>
+  <title>Real Estate Platform</title>
+  <link rel="shortcut icon" href="/public/images/PageLogo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/interbank.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="body1">
+    <!--HEADER-->
+    <%- include navbar.ejs %>
+
+    <!--MAINPAGE-->
+    <div class="main">
+      <p class="titlethanhtoan">Thực hiện thanh toán</p>
+      <div class="innermain">
+        <div class="inputinfo">
+          <form>
+            <input type="text" class="cardNumber aa" placeholder="Card Number" />
+            <br />
+            <input type="text" class="cardOwner aa" placeholder="Card Owner" />
+            <br />
+            <input type="datetime" class="launchedday aa" placeholder="Release Day" />
+            <br />
+            <br />
+            <a href="../typeproperty">
+              <button type="button" class="thanhtoan">Pay</button>
             </a>
-          </div>
-          <div id="footermenu" class="footermenu" role="navigation">
-            <h2 class="titleblock"></h2>
-            <ul class="menu">
-              <li class="menuitem">
-                <a href="./contactestate" class="contact">Contact us</a>
-              </li>
-              <li class="menuitem">
-                <a href="#" class="term">Terms and Conditions</a>
-              </li>
-              <li class="menuitem">
-                <a href="#l" class="privacy">Privacy Policy</a>
-              </li>
-              <li class="menuitem">
-                <a href="#" class="career">Careers</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="social" class="socialmedia">
-          <h1>Follow us:</h1>
-          <ul class="footersocial">
-            <div>
-              <a
-                href="https://www.facebook.com/nguyenhuycuong.nguyenhuycuong.33"
-                class="icon-fb"
-              >
-                <i class="fab fa-facebook-f" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/binhanred/ " class="icon-insta"
-                ><i class="fab fa-instagram" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://twitter.com/CuongHuyNg" class="icon-twit"
-                ><i class="fab fa-twitter" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a
-                href="https://www.youtube.com/channel/UC0HdtBwDacmZQxQtM5qGw8Q/videos?view=57&flow=grid"
-                class="icon-youtb"
-                ><i class="fab fa-youtube" aria-hidden="true"></i
-              ></a>
-            </div>
-          </ul>
-        </div>
-        <div class="container">
-          <form action="">
-            <h1>Join Our Newsletter:</h1>
-            <div class="email-box">
-              <i class="far fa-envelope"></i>
-              <input
-                class="tbox"
-                type="email"
-                name=""
-                value=""
-                placeholder="Enter your Email"
-              />
-              <button class="btn1" type="button" name="button">
-                Subscribe
-              </button>
-            </div>
+            <a href="../checkaccount">
+              <button type="button" class="thanhtoan">Back</button></a>
           </form>
         </div>
-        <div>
-          <a class="gotopbtn" href="#">
-            <i class="fas fa-arrow-up"> </i>
-          </a>
+        <div class="banklogo">
+          <img src="/images/WebcoPhung/banking/viettinbank.png" class="viettinbank" />
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+    <!--FOOTER-->
+    <%- include footer.ejs %>
+
+  </section>
+</body>
+
 </html>

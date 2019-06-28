@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var connection = require("db/dbconfig");
 var mysql = require("mysql");
+var { insert } = require("services/runQuery");
 
 router.get("/", function(req, res, next) {
   res.render("index", { title: "Express" });
@@ -74,6 +75,10 @@ router.get("/allpost", function(req, res, next) {
     if (err) throw err;
     res.send(result);
   });
+});
+router.post("/post", function(req, res, next) {
+  req.body.customer_id = req.user.id;
+  res.send(req.body);
 });
 router.get("/typeproperty", function(req, res, next) {
   res.render("typeproperty", { title: "Express" });

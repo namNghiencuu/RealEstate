@@ -1,450 +1,248 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RealEstate Platform</title>
-    <link rel="shortcut icon" href="/public/images/PageLogo/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css"/>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/stylesheets/chooseProperty.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      .mySlides {
-        display: none;
-      }
-      img {
-        vertical-align: middle;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="body1">
-      <!--Header-->
-      <div id="navbar">
-        <div class="logo">
-          <a href="./realestate"
-            ><img
-              src="/images/PageLogo/logo_main.png"
-              width="inherit;"
-          /></a>
-        </div>
-        <div><a href="">Buy</a></div>
-        <div><a href="">Rent</a></div>
-        <div><a href="">Sell</a></div>
-        <div><a href="">Agent Finder</a></div>
-        <div><a href="/signin" class="abc">Sign in</a></div>
-        <div><a href="" class="abc">Help</a></div>
-      </div>
-      <!--MainPage-->
-      <div class="mainpage">
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh1.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh13.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh4.jpg"
-              style="width:100%;"
-            />
-          </div>
 
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh8.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh10.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh12.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh11.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh5.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh9.jpg"
-              style="width:100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img
-              class="img"
-              src="/images/WebcoPhung/hinh6.jpg"
-              style="width:100%"
-            />
-          </div>
-          <a class="prev center" onclick="plusSlides(-1) ">&#10094;</a>
-          <a class="next center" onclick="plusSlides(1)">&#10095;</a>
+<head>
+  <title>RealEstate Platform</title>
+  <link rel="shortcut icon" href="/public/images/PageLogo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/chooseProperty.css" />
+  <link href="/font/EncodedSansExpanded.css" rel="stylesheet" />
+  <link href="/font/OpenSansCondensed300.css" rel="stylesheet" />
+  <style>
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="body1">
+    <!--Header-->
+    <%- include navbar.ejs %>
+
+    <!--MainPage-->
+    <div class="mainpage">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh1.jpg" style="width:100%" />
         </div>
-        <br />
-        <div class="preinfo">
-          <div class="city">
-            <a href="#"
-              >Minutes
-              <img
-                src="https://img.icons8.com/material-rounded/24/000000/right.png"
-              />
-              LamDong
-              <img
-                src="https://img.icons8.com/material-rounded/24/000000/right.png"
-              />
-              DaLat
-            </a>
-          </div>
-          <div class="sharing">
-            <a href="#"
-              >Share<img
-              src="https://img.icons8.com/material/24/000000/share-3.png"
-              class="shareicon"</a
-            >
-          </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh13.jpg" style="width:100%" />
         </div>
-        <div class="inner1">
-          <div class="leftinfo">
-            <p class="title">
-              Vườn đom đóm-Phòng đơn hướng vườn
-            </p>
-            <p class="title1">Hồng Trứng</p>
-            <div class="address">
-              <a href="" class="dalat"
-                ><img
-                  src="https://img.icons8.com/android/24/000000/map.png"
-                  class="direction"
-                />Đà Lạt, Lâm Đồng, Việt Nam</a
-              >
-              <a href="#map"><p class="seedirection">Xem bản đồ</p></a>
-              <a href="" class="nharieng"
-                ><img
-                  src="https://img.icons8.com/material-outlined/24/000000/home.png"
-                  class="direction"
-                />Nhà riêng 12m<sup>2</sup></a
-              >
-            </div>
-            <div class="detailinfo">
-              <p class="roominfo">
-                Phòng riêng · 2 phòng tắm · 1 giường · 1 phòng ngủ · 2 khách
-                (tối đa 2 khách)
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh4.jpg" style="width:100%;" />
+        </div>
+
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh8.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh10.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh12.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh11.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh5.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh9.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides fade">
+          <img class="img" src="/images/WebcoPhung/hinh6.jpg" style="width:100%" />
+        </div>
+        <a class="prev center" onclick="plusSlides(-1) ">&#10094;</a>
+        <a class="next center" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <div class="preinfo">
+        <div class="city">
+          <a href="#">Minutes
+            <img src="https://img.icons8.com/material-rounded/24/000000/right.png" />
+            LamDong
+            <img src="https://img.icons8.com/material-rounded/24/000000/right.png" />
+            DaLat
+          </a>
+        </div>
+        <div class="sharing">
+          <a href="#">Share<img src="https://img.icons8.com/material/24/000000/share-3.png" class="shareicon" </a>
+              </div> </div> <div class="inner1">
+            <div class="leftinfo">
+              <p class="title">
+                Vườn đom đóm-Phòng đơn hướng vườn
               </p>
-              <p class="roominfo1">
-                <i class="fas fa-check check"></i>Phòng Hồng trứng có thể được
-                xem là căn phòng rộng rãi, biệt lập và riêng tư
-              </p>
-              <p class="roominfo2">
-                nhất trong các phòng vì nằm góc ngoài của nhà
-              </p>
-              <p class="roominfo1">
-                <i class="fas fa-check check"></i>View từ căn phòng sẽ nhìn
-                thẳng ra một cây hồng cổ thụ và khoảng sân thật rộng
-              </p>
-              <p class="roominfo2">
-                phía sau nhà
-              </p>
-              <p class="roominfo1">
-                <i class="fas fa-check check"></i>Rất phù hợp nếu bạn đang tìm
-                một nơi yên bình thật sự, một ngôi nhà nhỏ để bạn
-              </p>
-              <p class="roominfo2">
-                thong thả tận hưởng Đà Lạt trọn vẹn.
-              </p>
-              <p class="roominfo1">
-                <i class="fas fa-check check"></i>Vườn chỉ có sự mến thương hiếu
-                khách dành cho bạn và còn nhiều điều khác nữa
-              </p>
-              <p class="roominfo2">
-                để bạn tự cảm nhận hơn là có thể nói ra bằng lời.
-              </p>
-            </div>
-            <div class="accessibility">
-              <div class="family">
-                <p class="tienich">Tiện ích gia đình</p>
-                <p>
-                  <img
-                    src="https://img.icons8.com/android/24/000000/no-smoking.png"
-                    class="direction"
-                  />Không hút thuốc
+              <p class="title1">Hồng Trứng</p>
+              <div class="address">
+                <a href="" class="dalat"><img src="https://img.icons8.com/android/24/000000/map.png"
+                    class="direction" />Đà
+                  Lạt, Lâm Đồng, Việt Nam</a>
+                <a href="#map">
+                  <p class="seedirection">Xem bản đồ</p>
+                </a>
+                <a href="" class="nharieng"><img src="https://img.icons8.com/material-outlined/24/000000/home.png"
+                    class="direction" />Nhà riêng 12m<sup>2</sup></a>
+              </div>
+              <div class="detailinfo">
+                <p class="roominfo">
+                  Phòng riêng · 2 phòng tắm · 1 giường · 1 phòng ngủ · 2 khách
+                  (tối đa 2 khách)
+                </p>
+                <p class="roominfo1">
+                  <i class="fas fa-check check"></i>Phòng Hồng trứng có thể được
+                  xem là căn phòng rộng rãi, biệt lập và riêng tư
+                </p>
+                <p class="roominfo2">
+                  nhất trong các phòng vì nằm góc ngoài của nhà
+                </p>
+                <p class="roominfo1">
+                  <i class="fas fa-check check"></i>View từ căn phòng sẽ nhìn
+                  thẳng ra một cây hồng cổ thụ và khoảng sân thật rộng
+                </p>
+                <p class="roominfo2">
+                  phía sau nhà
+                </p>
+                <p class="roominfo1">
+                  <i class="fas fa-check check"></i>Rất phù hợp nếu bạn đang tìm
+                  một nơi yên bình thật sự, một ngôi nhà nhỏ để bạn
+                </p>
+                <p class="roominfo2">
+                  thong thả tận hưởng Đà Lạt trọn vẹn.
+                </p>
+                <p class="roominfo1">
+                  <i class="fas fa-check check"></i>Vườn chỉ có sự mến thương hiếu
+                  khách dành cho bạn và còn nhiều điều khác nữa
+                </p>
+                <p class="roominfo2">
+                  để bạn tự cảm nhận hơn là có thể nói ra bằng lời.
                 </p>
               </div>
-              <div class="bep">
-                <p class="tienich">Tiện ích bếp</p>
-                <div class="tulanh">
+              <div class="accessibility">
+                <div class="family">
+                  <p class="tienich">Tiện ích gia đình</p>
                   <p>
-                    <img
-                      src="https://img.icons8.com/ios/50/000000/fridge.png"
-                      class="direction"
-                    />Tủ Lạnh
+                    <img src="https://img.icons8.com/android/24/000000/no-smoking.png" class="direction" />Không hút
+                    thuốc
                   </p>
                 </div>
-                <div class="bepgas">
-                  <img
-                    src="https://img.icons8.com/ios/50/000000/gas-stove.png "
-                    class="direction"
-                  />Bếp Gas
+                <div class="bep">
+                  <p class="tienich">Tiện ích bếp</p>
+                  <div class="tulanh">
+                    <p>
+                      <img src="https://img.icons8.com/ios/50/000000/fridge.png" class="direction" />Tủ Lạnh
+                    </p>
+                  </div>
+                  <div class="bepgas">
+                    <img src="https://img.icons8.com/ios/50/000000/gas-stove.png " class="direction" />Bếp Gas
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accessibility1">
-              <p class="tienich">Tiện ích giải trí</p>
-              <div class="wifi">
-                <p>
-                  <img
-                    src="https://img.icons8.com/windows/32/000000/wi-fi-connected.png"
-                    class="direction"
-                  />Wi-Fi
-                </p>
+              <div class="accessibility1">
+                <p class="tienich">Tiện ích giải trí</p>
+                <div class="wifi">
+                  <p>
+                    <img src="https://img.icons8.com/windows/32/000000/wi-fi-connected.png" class="direction" />Wi-Fi
+                  </p>
+                </div>
+                <div class="canhquan">
+                  <p>
+                    <img src="https://img.icons8.com/windows/32/000000/landscape.png" class="direction" />Cảnh Quan
+                  </p>
+                </div>
+                <div class="bbq">
+                  <p>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/big-green-egg.png"
+                      class="direction" />BBQ
+                  </p>
+                </div>
               </div>
-              <div class="canhquan">
-                <p>
-                  <img
-                    src="https://img.icons8.com/windows/32/000000/landscape.png"
-                    class="direction"
-                  />Cảnh Quan
-                </p>
+              <div class="accessibility2">
+                <p class="tienich">Tiện ích</p>
+                <div class="daugoi">
+                  <p>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/shampoo.png" />Dầu Gội, Dầu Xả
+                  </p>
+                </div>
+                <div class="maysay">
+                  <p>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/hair-dryer.png" class="direction" />Máy
+                    Sấy
+                  </p>
+                </div>
+                <div class="xaphong">
+                  <p>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/soap.png" class="direction" />Xà Phòng
+                  </p>
+                </div>
               </div>
-              <div class="bbq">
-                <p>
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/big-green-egg.png"
-                    class="direction"
-                  />BBQ
-                </p>
-              </div>
-            </div>
-            <div class="accessibility2">
-              <p class="tienich">Tiện ích</p>
-              <div class="daugoi">
-                <p>
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/shampoo.png"
-                  />Dầu Gội, Dầu Xả
-                </p>
-              </div>
-              <div class="maysay">
-                <p>
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/hair-dryer.png"
-                    class="direction"
-                  />Máy Sấy
-                </p>
-              </div>
-              <div class="xaphong">
-                <p>
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/soap.png"
-                    class="direction"
-                  />Xà Phòng
-                </p>
+              <div id="map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15613.362368115242!2d108.4269181!3d11.9509044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68c1299d6d8826dc!2zVsaw4budbiDEkG9tIMSQw7NtIMSQw6AgTOG6oXQ!5e0!3m2!1svi!2s!4v1560397032913!5m2!1svi!2s"
+                  width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
             </div>
-            <div id="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15613.362368115242!2d108.4269181!3d11.9509044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68c1299d6d8826dc!2zVsaw4budbiDEkG9tIMSQw7NtIMSQw6AgTOG6oXQ!5e0!3m2!1svi!2s!4v1560397032913!5m2!1svi!2s"
-                width="600"
-                height="450"
-                frameborder="0"
-                style="border:0"
-                allowfullscreen
-              ></iframe>
+            <div class="rightinfo">
+              <p class="price">370,000đ<sub>/đêm</sub></p>
+              <form action="#">
+                <input type="date" id="date" class="infoo" name="date" placeholder="Ngày đến" />
+                <input type="number" id="passenger" class="infoo" name="passenger" placeholder="Passenger" />
+                <a href="../buy">
+                  <button type="button" class="book">
+                    Book Now
+                  </button>
+                </a>
+                <hr width="80%" style="margin-top:20px;" text-align="left" />
+                <div class="ownerinfo">
+                  <img src="https://img.icons8.com/ios/50/000000/panda.png" class="direction2" />
+                  <p class="ownername">Phan Hoàng Nam</p>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="rightinfo">
-            <p class="price">370,000đ<sub>/đêm</sub></p>
-            <form action="#">
-              <input
-                type="date"
-                id="date"
-                class="infoo"
-                name="date"
-                placeholder="Ngày đến"
-              />
-              <input
-                type="number"
-                id="passenger"
-                class="infoo"
-                name="passenger"
-                placeholder="Passenger"
-              />
-              <a href="../buy">
-                <button type="button" class="book">
-                  Book Now
-                </button>
-              </a>
-              <hr width="80%" style="margin-top:20px;" text-align="left" />
-              <div class="ownerinfo">
-                <img
-                  src="https://img.icons8.com/ios/50/000000/panda.png"
-                  class="direction2"
-                />
-                <p class="ownername">Phan Hoàng Nam</p>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
       <!--Footer-->
-      <div id="footer" class="footers" role="contentinfo">
-        <div class="inner">
-          <div class="logofooter">
-            <a
-              href="/realestate"
-              class="footerlogo"
-              id="logofooters"
-            >
-              <img
-                src="/images/PageLogo/logo_main.png"
-                class="footerimage"
-              />
-            </a>
-          </div>
-          <div id="footermenu" class="footermenu" role="navigation">
-            <h2 class="titleblock"></h2>
-            <ul class="menu">
-              <li class="menuitem">
-                <a href="./contactestate" class="contact">Contact us</a>
-              </li>
-              <li class="menuitem">
-                <a href="#" class="term">Terms and Conditions</a>
-              </li>
-              <li class="menuitem">
-                <a href="#l" class="privacy">Privacy Policy</a>
-              </li>
-              <li class="menuitem">
-                <a href="#" class="career">Careers</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="social" class="socialmedia">
-          <h1>Follow us:</h1>
-          <ul class="footersocial">
-            <div>
-              <a
-                href="https://www.facebook.com/nguyenhuycuong.nguyenhuycuong.33"
-                class="icon-fb"
-              >
-                <i class="fab fa-facebook-f" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/binhanred/ " class="icon-insta"
-                ><i class="fab fa-instagram" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://twitter.com/CuongHuyNg" class="icon-twit"
-                ><i class="fab fa-twitter" aria-hidden="true"></i
-              ></a>
-            </div>
-            <div>
-              <a
-                href="https://www.youtube.com/channel/UC0HdtBwDacmZQxQtM5qGw8Q/videos?view=57&flow=grid"
-                class="icon-youtb"
-                ><i class="fab fa-youtube" aria-hidden="true"></i
-              ></a>
-            </div>
-          </ul>
-        </div>
-        <div class="container">
-          <form action="">
-            <h1>Join Our Newsletter:</h1>
-            <div class="email-box">
-              <i class="far fa-envelope"></i>
-              <input
-                class="tbox"
-                type="email"
-                name=""
-                value=""
-                placeholder="Enter your Email"
-              />
-              <button class="btn1" type="button" name="button">
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
-        <div>
-          <a class="gotopbtn" href="#">
-            <i class="fas fa-arrow-up"> </i>
-          </a>
-        </div>
-      </div>
-    </section>
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+      <%- include footer.ejs %>
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
+  </section>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
 
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
       }
-    </script>
-  </body>
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
 </html>
