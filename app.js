@@ -1,13 +1,17 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
+var session = require("express-session");
+var passport = require("passport");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var indexRouter = require("./src/app/routes/index");
 var usersRouter = require("./src/app/routes/users");
-require("db/dbconfig");
+var authRouter = require("./src/app/routes/authentication");
 
+require("db/dbconfig");
+require("config/passportConfiguration");
 var app = express();
 
 // view engine setup
@@ -20,8 +24,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "src", "app", "public")));
 
+app.use(
+  session({
+    secret: "secret",
+    saveUninitialized: true,
+    resave: true
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/auth", authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

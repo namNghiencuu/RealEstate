@@ -1,23 +1,7 @@
-var passport = require("passport"),
-  LocalStrategy = require("passport-local").Strategy;
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
 var conn = require("db/dbconfig");
 var mysql = require("mysql");
-const passportJWT = require("passport-jwt");
-const JWTStrategy = passportJWT.Strategy;
-const ExtractJWT = passportJWT.ExtractJwt;
-
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  let sqlString = mysql.format("SELECT * from useraccount where id = ?? ", [
-    id
-  ]);
-  conn.query(sqlString, function(err, result) {
-    return done(err, result);
-  });
-});
 
 passport.use(
   new LocalStrategy(
@@ -25,7 +9,7 @@ passport.use(
     function(email, password, cb) {
       try {
         let sqlString = mysql.format(
-          "SELECT id, displayName, type, email, avatar, displayName from useraccount where email = ?? AND password = ?? ",
+          "SELECT id, displayName, type, email, avatar, displayName from useraccount where email = ? AND password = ? LIMIT 0,1 ",
           [email, password]
         );
         conn.query(sqlString, function(err, result) {
@@ -33,31 +17,28 @@ passport.use(
           console.log(result);
           if (!result)
             return cb(null, false, {
-              message: "Incorrect username or password"
+              message: "username or password is wrong"
             });
-          else return cb(null, result, { message: "Logged In" });
+          else return cb(null, result[0]);
         });
       } catch (error) {
         console.log(error.toString());
-        return cb(error);
+        return cb(error, false, { message: "Error" });
       }
     }
   )
 );
-passport.use(
-  new JWTStrategy(
-    {
-      jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-      secretOrKey: "your_jwt_secret"
-    },
-    function(jwtPayload, cb) {
-      return UserModel.findOneById(jwtPayload.id)
-        .then(user => {
-          return cb(null, user);
-        })
-        .catch(err => {
-          return cb(err);
-        });
-    }
-  )
-);
+passport.serializeUser(function(user, done) {
+  console.log(user);
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  let sqlString = mysql.format(
+    "SELECT * from useraccount where id = ? LIMIT 0,1",
+    [id]
+  );
+  conn.query(sqlString, function(err, result) {
+    done(err, result[0]);
+  });
+});

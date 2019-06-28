@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_PATH=./src nodemon ./bin/www"
+    "start": "cross-env NODE_PATH=./src nodemon ./bin/www",
+    "debug": "cross-env NODE_PATH=./src nodemon --inspect ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",
