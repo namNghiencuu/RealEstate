@@ -10,7 +10,7 @@ router.get("/", function(req, res, next) {
 router.post("/createAccount", function(req, res, next) {
   insert("useraccount", req.body, function(error, result) {
     if (error) throw error;
-    res.render("login");
+    return res.send(req.body);
   });
 });
 
