@@ -40,6 +40,9 @@ router.get("/realestate", function(req, res, next) {
 router.get("/renthome", function(req, res, next) {
   return res.render("renthome", { title: "Express" });
 });
+router.get("/VerifyByService", function(req, res, next) {
+  res.render("VerifyByService", { title: "Express" });
+});
 router.get("/salehome", function(req, res, next) {
   return res.render("salehome", { title: "Express" });
 });

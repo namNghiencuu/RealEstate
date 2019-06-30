@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate Platform</title>
+  <link rel="shortcut icon" href="/images/PageLogo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/modal.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/VerifyByService.css" />
+  <link href="/font/EncodedSansExpanded.css" rel="stylesheet" />
+  <link href="/font/OpenSansCondensed300.css" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="body1">
+    <!--HEADER-->
+    <div id="navbar">
+      <div class="logo">
+        <a href="./realestate"><img src="/images/PageLogo/logo_main.png" width="inherit;" /></a>
+      </div>
+      <div><a href="">Buy</a></div>
+      <div><a href="">Rent</a></div>
+      <div><a href="">Sell</a></div>
+      <div><a href="">Agent Finder</a></div>
+      <div><a href="/signin" class="abc">Sign in</a></div>
+      <div><a href="" class="abc">Help</a></div>
+    </div>
+    <!--MAINPAGE-->
+    <div class="mainmenu">
+      <p class="titlethanhtoan">Xác nhận tài khoản</p>
+      <p class="servicesinfo">Thông tin tài khoản</p>
+      <div class="tableinfo">
+        <table style="width: 50%;" class="propertyinfo">
+          <tr>
+            <th>Stt</th>
+            <th>FirstName</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Compare</th>
+            <th>Accept</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Nam</td>
+            <td>Pham</td>
+            <td>(+84)859608521</td>
+            <td>namidol@gmail.com</td>
+            <td>
+              <button type="button" class="save" id="compare__button">
+                Clickhere
+              </button>
+            </td>
+            <td>
+              <a href=""><button type="button" class="save">Xác thực</button></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- /* ************************************************** */
+            /* ************************************************** */
+            /* MODAL */
+            /* ************************************************** */
+            /* ************************************************** */ -->
+
+    <!--FOOTER-->
+  </section>
+  <div id="compare__modal" class="modal modal-submit" style="display: block;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div id="compare__images">
+          <img src="" alt="UserAvatar is here">
+          <img src="" alt="UserIdCard is here">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('compare__modal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("compare__button");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
