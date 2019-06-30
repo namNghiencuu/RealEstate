@@ -8,6 +8,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./src/app/routes/index");
 var usersRouter = require("./src/app/routes/users");
+var postRouter = require("./src/app/routes/post");
 var authRouter = require("./src/app/routes/authentication");
 
 require("db/dbconfig");
@@ -35,7 +36,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/", indexRouter);
+app.use("/", indexRouter, postRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 

@@ -1,8 +1,12 @@
 var express = require("express");
 var router = express.Router();
+var { uploadFile, getLinkMany } = require("services/uploadFile");
+var { selectAll, selectById } = require("services/runQuery");
 
-router.get("/post/:id", function(req, res, next) {
-  return res.render("post_template", { title: "Express" });
+router.get("/post/:id", async function(req, res, next) {
+  let post = await selectById("post", req.params.id);
+  post.propertyFacility = post.propertyFacility.split(",");
+  return res.render("post_template", { data: post });
 });
 
 router.post("/post", uploadFile("images").array("images", 10), function(
@@ -11,16 +15,14 @@ router.post("/post", uploadFile("images").array("images", 10), function(
   next
 ) {
   req.body.customer_id = req.user.id;
-  req.body.imageLink = getLinkMany(req.files).toString();
-  return res.send(req.body);
+  req.body.images = getLinkMany(req.files)
+    .toString()
+    .split(",");
+  return res.render("post_template", { data: req.body });
 });
 
 router.get("/allpost", function(req, res, next) {
-  let sqlString = "SELECT * FROM post";
-  connection.query(sqlString, function(err, result) {
-    if (err) throw err;
-    res.send(result);
-  });
+  return res.send(selectAll("post"));
 });
 
 module.exports = router;

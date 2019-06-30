@@ -28,37 +28,11 @@
     <!--MainPage-->
     <div class="mainpage">
       <div class="slideshow-container">
+        <% data.images.map((value, index) => { %>
         <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh1.jpg" style="width:100%" />
+          <img class="img" src="<%-value%>" style="width:100%" />
         </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh13.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh4.jpg" style="width:100%;" />
-        </div>
-
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh8.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh10.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh12.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh11.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh5.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh9.jpg" style="width:100%" />
-        </div>
-        <div class="mySlides fade">
-          <img class="img" src="/images/WebcoPhung/hinh6.jpg" style="width:100%" />
-        </div>
+        <% }) %>
         <a class="prev center" onclick="plusSlides(-1) ">&#10094;</a>
         <a class="next center" onclick="plusSlides(1)">&#10095;</a>
       </div>
@@ -67,9 +41,9 @@
         <div class="city">
           <a href="#">Minutes
             <img src="https://img.icons8.com/material-rounded/24/000000/right.png" />
-            LamDong
+            <%- data.district %>
             <img src="https://img.icons8.com/material-rounded/24/000000/right.png" />
-            DaLat
+            <%- data.city %>
           </a>
         </div>
         <div class="sharing">
@@ -77,109 +51,51 @@
               </div> </div> <div class="inner1">
             <div class="leftinfo">
               <p class="title">
-                Vườn đom đóm-Phòng đơn hướng vườn
+                <%- data.title %>
               </p>
-              <p class="title1">Hồng Trứng</p>
               <div class="address">
                 <a href="" class="dalat"><img src="https://img.icons8.com/android/24/000000/map.png"
-                    class="direction" />Đà
-                  Lạt, Lâm Đồng, Việt Nam</a>
+                    class="direction" /><%- data.city %>, <%- data.district %>, <%- data.ward %></a>
                 <a href="#map">
                   <p class="seedirection">Xem bản đồ</p>
                 </a>
                 <a href="" class="nharieng"><img src="https://img.icons8.com/material-outlined/24/000000/home.png"
-                    class="direction" />Nhà riêng 12m<sup>2</sup></a>
+                    class="direction" /><%- data.propertyType %> <%- data.propertyArea %>m<sup>2</sup></a>
               </div>
               <div class="detailinfo">
-                <p class="roominfo">
-                  Phòng riêng · 2 phòng tắm · 1 giường · 1 phòng ngủ · 2 khách
-                  (tối đa 2 khách)
-                </p>
-                <p class="roominfo1">
-                  <i class="fas fa-check check"></i>Phòng Hồng trứng có thể được
-                  xem là căn phòng rộng rãi, biệt lập và riêng tư
-                </p>
-                <p class="roominfo2">
-                  nhất trong các phòng vì nằm góc ngoài của nhà
-                </p>
-                <p class="roominfo1">
-                  <i class="fas fa-check check"></i>View từ căn phòng sẽ nhìn
-                  thẳng ra một cây hồng cổ thụ và khoảng sân thật rộng
-                </p>
-                <p class="roominfo2">
-                  phía sau nhà
-                </p>
-                <p class="roominfo1">
-                  <i class="fas fa-check check"></i>Rất phù hợp nếu bạn đang tìm
-                  một nơi yên bình thật sự, một ngôi nhà nhỏ để bạn
-                </p>
-                <p class="roominfo2">
-                  thong thả tận hưởng Đà Lạt trọn vẹn.
-                </p>
-                <p class="roominfo1">
-                  <i class="fas fa-check check"></i>Vườn chỉ có sự mến thương hiếu
-                  khách dành cho bạn và còn nhiều điều khác nữa
-                </p>
-                <p class="roominfo2">
-                  để bạn tự cảm nhận hơn là có thể nói ra bằng lời.
-                </p>
+                <%- data.detailDescription %>
               </div>
               <div class="accessibility">
                 <div class="family">
-                  <p class="tienich">Tiện ích gia đình</p>
-                  <p>
-                    <img src="https://img.icons8.com/android/24/000000/no-smoking.png" class="direction" />Không hút
-                    thuốc
-                  </p>
-                </div>
-                <div class="bep">
-                  <p class="tienich">Tiện ích bếp</p>
-                  <div class="tulanh">
-                    <p>
-                      <img src="https://img.icons8.com/ios/50/000000/fridge.png" class="direction" />Tủ Lạnh
-                    </p>
-                  </div>
-                  <div class="bepgas">
-                    <img src="https://img.icons8.com/ios/50/000000/gas-stove.png " class="direction" />Bếp Gas
-                  </div>
-                </div>
-              </div>
-              <div class="accessibility1">
-                <p class="tienich">Tiện ích giải trí</p>
-                <div class="wifi">
-                  <p>
-                    <img src="https://img.icons8.com/windows/32/000000/wi-fi-connected.png" class="direction" />Wi-Fi
-                  </p>
-                </div>
-                <div class="canhquan">
-                  <p>
-                    <img src="https://img.icons8.com/windows/32/000000/landscape.png" class="direction" />Cảnh Quan
-                  </p>
-                </div>
-                <div class="bbq">
-                  <p>
-                    <img src="https://img.icons8.com/material-outlined/24/000000/big-green-egg.png"
-                      class="direction" />BBQ
-                  </p>
-                </div>
-              </div>
-              <div class="accessibility2">
-                <p class="tienich">Tiện ích</p>
-                <div class="daugoi">
-                  <p>
-                    <img src="https://img.icons8.com/material-outlined/24/000000/shampoo.png" />Dầu Gội, Dầu Xả
-                  </p>
-                </div>
-                <div class="maysay">
-                  <p>
-                    <img src="https://img.icons8.com/material-outlined/24/000000/hair-dryer.png" class="direction" />Máy
-                    Sấy
-                  </p>
-                </div>
-                <div class="xaphong">
-                  <p>
-                    <img src="https://img.icons8.com/material-outlined/24/000000/soap.png" class="direction" />Xà Phòng
-                  </p>
+                  <p class="tienich">Tiện ích căn hộ</p>
+                  <% data.propertyFacility.map((value, index)=>{ %>
+                  <% switch(value.toUpperCase()) {
+                  case "POOL": %>
+                  <p><span><i class="fas fa-1x fa-swimmer"></i></span> Hồ bơi</p>
+                  <% break; %>
+                  <% case "WASHING MACHINE": %>
+                  <p><span><i class="fas fa-1x fa-socks"></i></span> Máy giặt</p>
+                  <% break; %>
+                  <% case "WIFI": %>
+                  <p><span><i class="fas fa-1x fa-wifi"></i></span> Wifi</p>
+                  <% break; %>
+                  <% case "GARDEN": %>
+                  <p><span><i class="fas fa-1x fa-tree"></i></span> Vườn</p>
+                  <% break; %>
+                  <% case "FURNITURE": %>
+                  <p><span><i class="fas fa-1x fa-couch"></i></span> Nội thất</p>
+                  <% break; %>
+                  <% case "BALCONY": %>
+                  <p><span><i class="fas fa-1x fa-dungeon"></i></span> Lan can</p>
+                  <% break; %>
+                  <% case "GYM": %>
+                  <p><span><i class="fas fa-1x fa-dumbbell"></i></span> Phòng gym</p>
+                  <% break; %>
+                  <% case "HIGH SPEED INTERNET": %>
+                  <p><span><i class="fas fa-1x fa-network-wired"></i></span> Internet tốc độ cao</p>
+                  <% break; %>
+                  <% }; %>
+                  <%})%>
                 </div>
               </div>
               <div id="map">
@@ -189,18 +105,18 @@
               </div>
             </div>
             <div class="rightinfo">
-              <p class="price">370,000đ<sub>/đêm</sub></p>
-              <form action="#">
+              <p class="price"><%- data.price %><sub>/đêm</sub></p>
+              <form action="/book" method="POST">
                 <input type="date" id="date" class="infoo" name="date" placeholder="Ngày đến" />
                 <input type="number" id="passenger" class="infoo" name="passenger" placeholder="Passenger" />
                 <a href="../buy">
-                  <button type="button" class="book">
+                  <button type="submit" class="book">
                     Book Now
                   </button>
                 </a>
                 <hr width="80%" style="margin-top:20px;" text-align="left" />
                 <div class="ownerinfo">
-                  <img src="https://img.icons8.com/ios/50/000000/panda.png" class="direction2" />
+                  <img src="" class="direction2" />
                   <p class="ownername">Phan Hoàng Nam</p>
                 </div>
               </form>

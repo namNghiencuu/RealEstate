@@ -5,7 +5,6 @@ var mysql = require("mysql");
 var conn = require("db/dbconfig");
 
 router.get("/login", function(req, res, next) {
-  console.log(req);
   return res.render("login");
 });
 
@@ -34,7 +33,6 @@ router.get("/test", function(req, res) {
   );
   conn.query(sqlString, function(err, result) {
     if (err) throw err;
-    console.log(result);
     if (!result) return res.send("error");
     else return res.send(result);
   });

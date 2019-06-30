@@ -6,7 +6,7 @@ module.exports = {
     var placeStore = `${type}`;
     let storage = multer.diskStorage({
       destination: (req, file, cb) => {
-        cb(null, "src/app/public/" + placeStore);
+        cb(null, "src/app/public/upload/" + placeStore);
       },
       filename: (req, file, cb) => {
         let fileName = file.originalname.split(".");

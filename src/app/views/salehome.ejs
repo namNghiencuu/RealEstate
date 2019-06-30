@@ -20,7 +20,7 @@
     <div class="mainmenu">
       <P class="titlerent">Thông tin sản phẩm </P>
       </br>
-      <form action="/post" method="POST">
+      <form action="/post" method="POST" enctype="multipart/form-data">
         <div class="posting">
           <select class="custom-select3" name="propertyType">
             <option value="" disabled selected>Loại bất động sản </option>
@@ -40,23 +40,23 @@
           <br />
           <select class="custom-select" name="city">
             <option value="" disabled selected>Thành phố </option>
-            <option value="1">HCM</option>
-            <option value="2">Quận 1</option>
-            <option value="3">Quận 1</option>
-            <option value="4">Quận 1</option>
+            <option value="HCM">HCM</option>
+            <option value="Vũng Tàu">Vũng Tàu</option>
+            <option value="Nha Trang">Nha Trang</option>
+            <option value="Khánh Hòa">Khánh Hòa</option>
           </select>
           <select class="custom-select1" name="district">
             <option value="" disabled selected>Quận </option>
-            <option value="1">Quận 1</option>
-            <option value="2">Quận 1</option>
-            <option value="3">Quận 1</option>
+            <option value="Quận 1">Quận 1</option>
+            <option value="Quận 2">Quận 2</option>
+            <option value="Quận 3">Quận 3</option>
           </select>
           <select class="custom-select2" name="ward">
             <option value="" disabled selected>Huyện/ Phường </option>
-            <option value="1">BC</option>
-            <option value="2">Quận 1</option>
-            <option value="3">Quận 1</option>
-            <option value="4">Quận 1</option>
+            <option value="Tương Dương">Tương Dương</option>
+            <option value="Hoàng Sa">Hoàng Sa</option>
+            <option value="Hóc Môn">Hóc Môn</option>
+            <option value="Lý Sơn">Lý Sơn</option>
           </select>
           <br />
           <input type="text" id="text" name="price" class="aa" placeholder="Giá" />
@@ -71,45 +71,39 @@
             <p class="tienichtitle">Tiện ích</p>
             <div class="details">
               <div class="row1">
-                <input type="checkbox" name="propertyFacility" value="wifi" />
+                <input type="checkbox" name="propertyFacility" value="WIFI" />
                 Wifi<br />
-                <input type="checkbox" name="propertyFacility" />
-                Cảnh quan đẹp<br />
-                <input type="checkbox" name="propertyFacility" />
-                Có vườn<br />
+                <input type="checkbox" name="propertyFacility" value="POOL" />
+                Hồ bơi<br />
+                <input type="checkbox" name="propertyFacility" value="WASHING MACHINE" />
+                Máy giặt<br />
               </div>
               <div class="row2">
-                <input type="checkbox" name="propertyFacility" />
-                Sân bay
+                <input type="checkbox" name="propertyFacility" value="GARDEN" />
+                Vườn
                 <br />
-                <input type="checkbox" name="propertyFacility" />
-                Trường Học<br />
-                <input type="checkbox" name="propertyFacility" />
-                Chợ<br />
-                <input type="checkbox" name="propertyFacility" />
-                Khu thương mại
+                <input type="checkbox" name="propertyFacility" value="FURNITURE" />
+                Nội thất<br />
+                <input type="checkbox" name="propertyFacility" value="BALCONY" />
+                Lan can<br />
+                <input type="checkbox" name="propertyFacility" value="GYM" />
+                Gym
               </div>
               <div class="row3">
-                <input type="checkbox" name="propertyFacility" />
-                Máy lạnh
+                <input type="checkbox" name="propertyFacility" value="HIGH SPEED INTERNET" />
+                Internet tốc độ cao
                 <br />
-                <input type="checkbox" name="propertyFacility" />
-                Máy Giặt<br />
-                <input type="checkbox" name="propertyFacility" />
-                Máy sấy tóc<br />
-                <input type="checkbox" name="propertyFacility" />
-                Máy hút bụi
               </div>
             </div>
           </div>
           <div class="idcard1">
             <p class="cmnd">Images:</p>
-            <input type="file" id="file" name="file" class=" aa file" value="fileUpload" multiple />
+            <input type="file" name="images" class=" aa file" multiple="multiple" />
           </div>
           <p class="uploadmaximum">Please upload maximum 10 images</p>
           <div class="idcard1">
             <p class="cmnd">Legal Dcument:</p>
-            <input type="file" id="file" name="file" class=" aa file" value="fileUpload" />
+            <input type="file" name="legaldoc" class=" aa file" value="fileUpload" />
           </div>
         </div>
         <div class="dieukhoan">

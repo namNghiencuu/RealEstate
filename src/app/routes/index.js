@@ -3,7 +3,7 @@ var router = express.Router();
 var connection = require("db/dbconfig");
 var mysql = require("mysql");
 var multer = require("multer");
-var { insert } = require("services/runQuery");
+var { insert, selectAll, selectById } = require("services/runQuery");
 var { uploadFile, getLinkMany, getLink } = require("services/uploadFile");
 
 router.get("/", function(req, res, next) {
@@ -72,10 +72,6 @@ router.post("/salehome", function(req, res, next) {
 
 router.get("/typeproperty", function(req, res, next) {
   return res.render("typeproperty", { title: "Express" });
-});
-
-router.get("/test", function(req, res, next) {
-  return res.render("test");
 });
 
 router.post("/test", uploadFile("images").array("images", 10), function(
