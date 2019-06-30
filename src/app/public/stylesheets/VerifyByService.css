@@ -389,3 +389,17 @@ div:hover {
   color: red;
   text-decoration: none;
 }
+
+#compare__images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#compare__images .compare__container {
+  flex-basis: 50%;
+  height: 30vh;
+}
+#compare__images .compare__container img {
+  width: 100%;
+  height: auto;
+}
