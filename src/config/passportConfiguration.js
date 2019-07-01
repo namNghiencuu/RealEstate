@@ -9,7 +9,7 @@ passport.use(
     function(email, password, cb) {
       try {
         let sqlString = mysql.format(
-          "SELECT id, displayName, type, email, avatar, displayName from useraccount where email = ? AND password = ? LIMIT 0,1 ",
+          "SELECT id, displayName, type, email, avatar from useraccount where email = ? AND password = ? LIMIT 0,1 ",
           [email, password]
         );
         conn.query(sqlString, function(err, result) {

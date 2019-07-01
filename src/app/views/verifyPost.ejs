@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate Platform</title>
+  <link rel="shortcut icon" href="/images/PageLogo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/lib/fontawesome-free-5.8.1-web/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/modal.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/VerifyByService.css" />
+  <link href="/font/EncodedSansExpanded.css" rel="stylesheet" />
+  <link href="/font/OpenSansCondensed300.css" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="body1">
+    <!--HEADER-->
+    <%- include navbar.ejs %>
+    <!--MAINPAGE-->
+    <div class="mainmenu">
+      <p class="titlethanhtoan">Xác nhận thông tin pháp lý</p>
+      <div class="tableinfo">
+        <table style="width: 50%;" class="propertyinfo">
+          <tr>
+            <th>Đường link bài post</th>
+            <th>Giấy tờ nhà đất</th>
+            <th>Tên Tài khoản</th>
+          </tr>
+          <% listPost.map((post, index)=>{ %>
+          <tr>
+            <td><a href="post/<%- post.id %>">Đường link</a></td>
+            <td><a href="/upload/images/<%- post.legalDocument %>">Đường link</a></td>
+            <td><%- post.customer_id %></td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+    </div>
+</body>
+
+</html>

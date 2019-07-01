@@ -19,7 +19,30 @@ router.get("/checkaccount", function(req, res, next) {
   return res.render("checkaccount", { title: "Express" });
 });
 router.get("/checkpackages", function(req, res, next) {
-  return res.render("checkpackages", { title: "Express" });
+  return res.render("checkpackages", { id: req.params.id });
+});
+
+router.post("/checkpackages", function(req, res, next) {
+  insert(
+    "transaction",
+    {
+      amount: req.body.packages,
+      method: "POST FEE",
+      customer_id: req.user.id
+    },
+    function(err, result) {
+      let sqlString = mysql.format(
+        "INSERT INTO personalpost(post_id, customer_id) values( ?, ?)",
+        [result.insertId, 1]
+      );
+      connection.query(sqlString, function(err, result) {
+        if (err) throw err;
+        console.log("insert into personalpost");
+      });
+    }
+  );
+
+  return res.redirect("/personalPost");
 });
 
 router.get("/contactEstate", function(req, res, next) {
@@ -61,7 +84,7 @@ router.post("/salehome", function(req, res, next) {
       res.send(result);
       let sqlString = mysql.format(
         "INSERT INTO personalpost(post_id, customer_id) values( ?, ?)",
-        [resul.insertId, 1]
+        [result.insertId, req.user.id]
       );
       connection.query(sqlString, function(err, result) {
         if (err) throw err;

@@ -36,7 +36,21 @@ module.exports = {
         sqlString = mysql.format(sqlString, [id]);
         connection.query(sqlString, function(err, result) {
           if (err) throw err;
-          console.log(result);
+          resolve(result);
+        });
+      } catch (error) {
+        reject(error);
+      }
+    });
+  },
+  selectByOneAttribute: (table, attribute, value) => {
+    return new Promise((resolve, reject) => {
+      try {
+        let sqlString =
+          "SELECT * FROM " + table + " WHERE " + attribute + " = ?";
+        sqlString = mysql.format(sqlString, [value]);
+        connection.query(sqlString, function(err, result) {
+          if (err) throw err;
           resolve(result);
         });
       } catch (error) {

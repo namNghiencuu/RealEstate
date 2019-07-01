@@ -19,26 +19,26 @@
     <!--MAINPAGE-->
     <div class="main">
       <p class="chongoi">Chọn gói tin của bạn</p>
-      <div class="checkpakage">
-        <div class="common">
-          <input type="checkbox" class="checkbox1" name="Pakage" value="Common Pakage" />
-          <p class="titlecommon">Gói thông thường</p>
-          <a href="#" class="xemdieukhoan"> Xem điều khoản</a>
+      <form action="/checkpackages" method="POST">
+        <div class="checkpakage">
+          <div class="common">
+            <input type="radio" class="checkbox1" name="packages" value="100" />
+            <p class="titlecommon">Gói thông thường</p>
+            <a href="#" class="xemdieukhoan"> Giá tiền: 100k/ tháng</a>
+          </div>
+          <div class="primepakage">
+            <input type="radio" name="packages" class="checkbox2" value="200" />
+            <p class="titleprime">Gói cao cấp</p>
+            <a href="#" class="xemdieukhoan1">Giá tiền: 200k/ tháng</a>
+          </div>
+          <input type="text" hidden name="post_id" value="<%- id %>">
+          <div class="button">
+            <a href="/personalPost"><button type="button" class="nextt">Quay lại</button></a>
+            <button type="submit" class="back">Đăng bài</button>
+          </div>
         </div>
-        <div class="primepakage">
-          <input type="checkbox" name="Pakage" class="checkbox2" value="Prime Pakage" />
-          <p class="titleprime">Gói cao cấp</p>
-          <a href="#" class="xemdieukhoan1"> Xem điều khoản</a>
-        </div>
-        <div class="button">
-          <a href="/checkaccount"><button type="button" class="nextt">Next</button></a>
-          <a href="#"><button type="button" class="back">Back</button></a>
-        </div>
-      </div>
+      </form>
     </div>
-    <!--FOOTER-->
-    <%- include footer.ejs %>
-
   </section>
 </body>
 
